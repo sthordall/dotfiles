@@ -1,0 +1,75 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+"
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'tpope/vim-sensible'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'elmcast/elm-vim'
+Plugin 'tpope/vim-surround'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'mattn/webapi-vim'
+Plugin 'mattn/gist-vim'
+
+call vundle#end()
+filetype plugin indent on
+
+syntax on
+set ignorecase
+set smartcase
+set nu
+set tabstop=2
+set shiftwidth=2
+set cindent
+set tw=80
+set paste
+set ruler
+set incsearch
+set splitbelow
+set splitright
+set relativenumber
+
+" NERDTree Mapping
+map <C-n> :NERDTreeToggle<CR>
+
+" Solarized config
+syntax enable
+set background=dark
+colorscheme solarized
+call togglebg#map("<F1>") " Background toggle
+
+" Airline config
+let g:airline_theme='solarized'
+let g:airline_powerline_fonts=1
+"function! AirlineInit()
+"	let g:airline_section_a = airline#section#create(['mode',' ','branch'])
+"	let g:airline_section_b = airline#section#create_left(['ffenc','hunks','%f'])
+"	let g:airline_section_c = airline#section#create(['filetype'])
+"	let g:airline_section_x = airline#section#create(['%P'])
+"	let g:airline_section_y = airline#section#create(['%B'])
+"	let g:airline_section_z = airline#section#create_right(['%l','%c'])
+"endfunction
+"autocmd VimEnter * call AirlineInit()
+"autocmd GUIEnter * call AirlineInit()
+
+" GUI Font
+set guifont=Meslo\ LG\ M\ Regular\ for\ Powerline:h13
+
+" Leaderkey
+let mapleader = ","
+
+" No arrow keys!
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
