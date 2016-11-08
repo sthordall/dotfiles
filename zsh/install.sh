@@ -5,7 +5,12 @@
 echo 'Running ZSH install script'
 
 echo 'Installing ZSH with Homebrew'
-brew install zsh
+brew install zsh \
+						 zsh-syntax-highlighting
+
+echo 'Editing zsh permissions for compinit'
+chmod -R 755 /usr/local/share/zsh
+chown -R $(whoami):staff /usr/local/share/zsh
 
 echo 'Installing oh-my-zsh'
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
