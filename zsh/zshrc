@@ -1,0 +1,14 @@
+export DEFAULT_USER=`whoami`
+export USER=`whoami`
+
+# Path to oh-my-zsh installation.
+export ZSH=$HOME/.oh-my-zsh
+
+ZSH_THEME="agnoster"
+
+# Changes format of command execution time stamp shown in the history command output.
+HIST_STAMPS="dd/mm/yyyy"
+
+plugins=(git git-extras npm osx colored-man-pages)
+
+source $ZSH/oh-my-zsh.sh

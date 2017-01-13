@@ -1,7 +1,4 @@
-# Install
-Run the install.sh script to install packages, including brew when on OSX.
-'source install.sh'
+# dotfiles
+For use on NixOS, clone repo to `/etc/nixos`, modify config accordingly and run `nixos-rebuild switch`
 
-# Link
-To symlink dotfiles ending with '.sym', run the link.sh script.
-'source link.sh'
+For use on other unix distro, run `./link.sh USERNAME EMAIL HOME_DIR`
