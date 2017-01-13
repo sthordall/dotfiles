@@ -7,7 +7,7 @@
       grub = {
         enable = true;
         version = 2;
-        device = "/dev/sdb";
+        device = "/dev/sda";
       };
     };
   };

@@ -1,7 +1,7 @@
 #! /bin/bash
-USERNAME = $1
-EMAIL = $2
-HOME_DIR = $3
+USERNAME=$1
+EMAIL=$2
+HOME_DIR=$3
 
 # Git
 sed -e "s/AUTHORNAME/$USERNAME/g" \
