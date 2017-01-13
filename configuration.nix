@@ -6,6 +6,7 @@
   imports =
     [
       # Common
+      ./hardware-configuration.nix
       ./nix/bootloader.nix
       ./nix/desktop.nix
       ./nix/development.nix
