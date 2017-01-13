@@ -21,7 +21,7 @@
   environment.variables.HTTPS_PROXY = "http://127.0.0.1:3128/";
 
   networking = {
-    hostname = "nixdev";
+    hostName = "nixdev";
     domain = "danskenet.net";
     search = [ "danskenet.net" ];
     proxy.default = "http://127.0.0.1:3128/";

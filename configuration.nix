@@ -1,6 +1,8 @@
 { config, pkgs, ... }:
 
 {
+  system.stateVersion = "16.09";
+
   imports =
     [
       # Common
@@ -18,6 +20,14 @@
     allowUnfree = true;
     pulseaudio = true;
   };
+
+  i18n = {
+    consoleFont = "Lat2-Terminus12";
+    consoleKeyMap = "us";
+    defaultLocale = "en_US.UTF-8";
+  };
+
+  time.timeZone = "Europe/Copenhagen";
 
   # Link dotfiles to primary user
   # - Script args: username, email, home_dir
