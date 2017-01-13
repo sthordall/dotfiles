@@ -36,7 +36,7 @@
     linkDotfiles = {
       text = ''
         cd /etc/nixos
-        /etc/nixos/link.sh sthordall stephan@thordal.io /home/sthordall
+        ./link.sh sthordall stephan@thordal.io /home/sthordall
       '';
       deps = ["users"];
     };
