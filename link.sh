@@ -2,6 +2,7 @@
 USERNAME=$1
 EMAIL=$2
 HOME_DIR=$3
+DOTFILES_DIR=$4
 
 # Git
 sed -e "s/AUTHORNAME/$USERNAME/g" \
@@ -9,11 +10,11 @@ sed -e "s/AUTHORNAME/$USERNAME/g" \
     -e "s/GITHUB_USER/$USERNAME/g" \
     git/gitconfig.example > git/gitconfig
 
-ln -fs git/gitconfig $HOME_DIR/.gitconfig
-ln -fs git/gitignore $HOME_DIR/.gitignore
+ln -fs $DOTFILES_DIR/git/gitconfig $HOME_DIR/.gitconfig
+ln -fs $DOTFILES_DIR/git/gitignore $HOME_DIR/.gitignore
 
 # Vim
-ln -fs vim/vimrc $HOME_DIR/.vimrc
+ln -fs $DOTFILES_DIR/vim/vimrc $HOME_DIR/.vimrc
 
 # Zsh
-ln -fs zsh/zshrc $HOME_DIR/.zshrc
+ln -fs $DOTFILES_DIR/zsh/zshrc $HOME_DIR/.zshrc

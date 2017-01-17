@@ -5,6 +5,9 @@
 
   imports =
     [
+      # Machine Specific (Choose machine nix file)
+      ./nix/machines/workstation-db.nix
+
       # Common
       ./hardware-configuration.nix
       ./nix/bootloader.nix
@@ -12,9 +15,6 @@
       ./nix/development.nix
       ./nix/fonts.nix
       ./nix/users.nix
-
-      # Machine Specific (Choose machine nix file)
-      ./nix/machines/workstation-db.nix
     ];
 
   nixpkgs.config = {
@@ -37,7 +37,9 @@
     linkDotfiles = {
       text = ''
         cd /etc/nixos
-        ./link.sh sthordall stephan@thordal.io /home/sthordall
+				ln -sf ${pkgs.oh-my-zsh}/share/oh-my-zsh /home/sthordall/.oh-my-zsh
+				PATH=$PATH:/run/current-system/sw/bin/ \
+        ./link.sh sthordall stephan@thordal.io /home/sthordall /etc/nixos
       '';
       deps = ["users"];
     };
