@@ -38,6 +38,7 @@ set incsearch
 set splitbelow
 set splitright
 set relativenumber
+set guioptions-=r
 
 " NERDTree Mapping
 map <C-n> :NERDTreeToggle<CR>
