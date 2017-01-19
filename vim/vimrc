@@ -34,13 +34,12 @@ set shiftwidth=2
 set expandtab
 set cindent
 set tw=80
-set paste
 set ruler
 set incsearch
 set splitbelow
 set splitright
 set relativenumber
-set guioptions-=r
+set list " Show tabs and trailing spaces
 
 " NERDTree Mapping
 map <C-n> :NERDTreeToggle<CR>
