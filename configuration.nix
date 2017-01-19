@@ -36,9 +36,13 @@
   system.activationScripts = {
     linkDotfiles = {
       text = ''
+        export PATH=$PATH:/run/current-system/sw/bin/
+
+        ln -sf ${pkgs.oh-my-zsh}/share/oh-my-zsh /home/sthordall/.oh-my-zsh
+
+        git clone https://github.com/VundleVim/Vundle.vim.git /home/sthordall/.vim/bundle/Vundle.vim
+
         cd /etc/nixos
-				ln -sf ${pkgs.oh-my-zsh}/share/oh-my-zsh /home/sthordall/.oh-my-zsh
-				PATH=$PATH:/run/current-system/sw/bin/ \
         ./link.sh sthordall stephan@thordal.io /home/sthordall /etc/nixos
       '';
       deps = ["users"];

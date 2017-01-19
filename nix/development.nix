@@ -19,7 +19,6 @@
 
     # Vim
     vim
-    vimPlugins.vundle
 
     # Git
     git
