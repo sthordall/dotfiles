@@ -38,13 +38,17 @@
       text = ''
         export PATH=$PATH:/run/current-system/sw/bin/
 
-        ln -sf ${pkgs.oh-my-zsh}/share/oh-my-zsh /home/sthordall/.oh-my-zsh
+        if [ ! -d /home/sthordall/.oh-my-zsh ]
+        then
+          ln -sf ${pkgs.oh-my-zsh}/share/oh-my-zsh /home/sthordall/.oh-my-zsh
+        fi
 
         if [ ! -d /home/sthordall/.vim/bundle/Vundle.vim ]
         then
           mkdir -p /home/sthordall/.vim/bundle
           git clone https://github.com/VundleVim/Vundle.vim.git \
             /home/sthordall/.vim/bundle/Vundle.vim
+        fi
 
         cd /etc/nixos
         ./link.sh sthordall stephan@thordal.io /home/sthordall /etc/nixos
