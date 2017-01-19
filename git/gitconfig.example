@@ -23,3 +23,6 @@
         default = simple
 [github]
         user = GITHUB_USER
+[url "https://github.com/"]
+        insteadOf = git://github.com
+
