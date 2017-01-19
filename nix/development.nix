@@ -18,7 +18,7 @@
     nix-zsh-completions
 
     # Vim
-    vim
+    vimHugeX
 
     # Git
     git
@@ -35,6 +35,11 @@
     # .NET
     mono46
     fsharp
+		dotnetPackages.FSharpAutoComplete
+		dotnetPackages.FSharpCompilerCodeDom
+		dotnetPackages.FSharpCompilerService
+		dotnetPackages.FSharpData
+		dotnetPackages.FSharpFormatting
   ];
 
   services = {
