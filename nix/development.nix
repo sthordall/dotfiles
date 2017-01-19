@@ -32,6 +32,9 @@
     # Haskell
     stack
 
+    # Python
+    python
+
     # .NET
     mono46
     fsharp
