@@ -31,6 +31,7 @@ set smartcase
 set nu
 set tabstop=2
 set shiftwidth=2
+set expandtab
 set cindent
 set tw=80
 set paste
