@@ -69,8 +69,12 @@ let g:airline#extensions#tabline#enabled = 1
 "autocmd VimEnter * call AirlineInit()
 "autocmd GUIEnter * call AirlineInit()
 
-" GUI Font
-set guifont=Meslo\ LG\ M\ Regular\ for\ Powerline:h12
+" GUI Config
+set guifont=Roboto\ Mono\ for\ Powerline:h12
+set guioptions-=m  "remove menu bar
+set guioptions-=T  "remove toolbar
+set guioptions-=r  "remove right-hand scroll bar
+set guioptions-=L  "remove left-hand scroll bar
 
 " Leaderkey
 let mapleader = ","
