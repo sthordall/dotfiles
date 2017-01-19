@@ -40,7 +40,11 @@
 
         ln -sf ${pkgs.oh-my-zsh}/share/oh-my-zsh /home/sthordall/.oh-my-zsh
 
-        git clone https://github.com/VundleVim/Vundle.vim.git /home/sthordall/.vim/bundle/Vundle.vim
+        if [ ! -d /home/sthordall/.vim/bundle/Vundle.vim ]
+        then
+          mkdir -p /home/sthordall/.vim/bundle
+          git clone https://github.com/VundleVim/Vundle.vim.git \
+            /home/sthordall/.vim/bundle/Vundle.vim
 
         cd /etc/nixos
         ./link.sh sthordall stephan@thordal.io /home/sthordall /etc/nixos
