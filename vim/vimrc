@@ -70,7 +70,7 @@ let g:airline#extensions#tabline#enabled = 1
 "autocmd GUIEnter * call AirlineInit()
 
 " GUI Config
-set guifont=Roboto\ Mono\ for\ Powerline:h12
+set guifont=Roboto\ Mono\ for\ Powerline\ 12
 set guioptions-=m  "remove menu bar
 set guioptions-=T  "remove toolbar
 set guioptions-=r  "remove right-hand scroll bar
