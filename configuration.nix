@@ -6,7 +6,8 @@
   imports =
     [
       # Machine Specific (Choose machine nix file)
-      ./nix/machines/workstation-db.nix
+      #./nix/machines/workstation-db.nix
+      #./nix/machines/workstation-home.nix
 
       # Common
       ./hardware-configuration.nix
