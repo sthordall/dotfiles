@@ -20,6 +20,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'mattn/webapi-vim'
 Plugin 'mattn/gist-vim'
+Plugin 'fsharp/vim-fsharp'
 
 call vundle#end()
 filetype plugin indent on
@@ -30,14 +31,15 @@ set smartcase
 set nu
 set tabstop=2
 set shiftwidth=2
+set expandtab
 set cindent
 set tw=80
-set paste
 set ruler
 set incsearch
 set splitbelow
 set splitright
 set relativenumber
+set list " Show tabs and trailing spaces
 
 " NERDTree Mapping
 map <C-n> :NERDTreeToggle<CR>
@@ -70,10 +72,12 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-" GUI Options
-set guifont=Meslo\ LG\ M\ Regular\ for\ Powerline:h12
-set guioptions-=r " Remove right scrollbar
-set guioptions-=L " Remove left scrollbar
+" GUI Config
+set guifont=Roboto\ Mono\ for\ Powerline\ 12
+set guioptions-=m  "remove menu bar
+set guioptions-=T  "remove toolbar
+set guioptions-=r  "remove right-hand scroll bar
+set guioptions-=L  "remove left-hand scroll bar
 
 " Leaderkey
 let mapleader = ","

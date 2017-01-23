@@ -18,8 +18,7 @@
     nix-zsh-completions
 
     # Vim
-    vim
-    vimPlugins.vundle
+    vimHugeX
 
     # Git
     git
@@ -33,9 +32,17 @@
     # Haskell
     stack
 
+    # Python
+    python
+
     # .NET
     mono46
     fsharp
+		dotnetPackages.FSharpAutoComplete
+		dotnetPackages.FSharpCompilerCodeDom
+		dotnetPackages.FSharpCompilerService
+		dotnetPackages.FSharpData
+		dotnetPackages.FSharpFormatting
   ];
 
   services = {

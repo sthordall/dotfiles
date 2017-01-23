@@ -6,7 +6,8 @@
   imports =
     [
       # Machine Specific (Choose machine nix file)
-      ./nix/machines/workstation-db.nix
+      #./nix/machines/workstation-db.nix
+      #./nix/machines/workstation-home.nix
 
       # Common
       ./hardware-configuration.nix
@@ -36,9 +37,21 @@
   system.activationScripts = {
     linkDotfiles = {
       text = ''
+        export PATH=$PATH:/run/current-system/sw/bin/
+
+        if [ ! -d /home/sthordall/.oh-my-zsh ]
+        then
+          ln -sf ${pkgs.oh-my-zsh}/share/oh-my-zsh /home/sthordall/.oh-my-zsh
+        fi
+
+        if [ ! -d /home/sthordall/.vim/bundle/Vundle.vim ]
+        then
+          mkdir -p /home/sthordall/.vim/bundle
+          git clone https://github.com/VundleVim/Vundle.vim.git \
+            /home/sthordall/.vim/bundle/Vundle.vim
+        fi
+
         cd /etc/nixos
-				ln -sf ${pkgs.oh-my-zsh}/share/oh-my-zsh /home/sthordall/.oh-my-zsh
-				PATH=$PATH:/run/current-system/sw/bin/ \
         ./link.sh sthordall stephan@thordal.io /home/sthordall /etc/nixos
       '';
       deps = ["users"];
