@@ -38,7 +38,6 @@ set incsearch
 set splitbelow
 set splitright
 set relativenumber
-set guioptions-=r
 
 " NERDTree Mapping
 map <C-n> :NERDTreeToggle<CR>
@@ -46,6 +45,10 @@ map <C-n> :NERDTreeToggle<CR>
 " Buffer Nav Mapping
 map <C-l> :bnext<CR>
 map <C-h> :bprevious<CR>
+
+" Editing mappings
+" F3 -> delete trailing whitespaces
+:nnoremap <silent> <F3> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
 
 " Solarized config
 syntax enable
@@ -57,19 +60,20 @@ call togglebg#map("<F1>") " Background toggle
 let g:airline_theme='solarized'
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled = 1
-"function! AirlineInit()
-"	let g:airline_section_a = airline#section#create(['mode',' ','branch'])
-"	let g:airline_section_b = airline#section#create_left(['ffenc','hunks','%f'])
-"	let g:airline_section_c = airline#section#create(['filetype'])
-"	let g:airline_section_x = airline#section#create(['%P'])
-"	let g:airline_section_y = airline#section#create(['%B'])
-"	let g:airline_section_z = airline#section#create_right(['%l','%c'])
-"endfunction
-"autocmd VimEnter * call AirlineInit()
-"autocmd GUIEnter * call AirlineInit()
 
-" GUI Font
+" Syntastic config
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" GUI Options
 set guifont=Meslo\ LG\ M\ Regular\ for\ Powerline:h12
+set guioptions-=r " Remove right scrollbar
+set guioptions-=L " Remove left scrollbar
 
 " Leaderkey
 let mapleader = ","
