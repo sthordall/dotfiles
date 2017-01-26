@@ -5,8 +5,9 @@
     docker = {
       enable = true;
       socketActivation = true;
+      enableOnBoot = true;
       extraOptions = ''
-        --insecure-registry docker-hub:5043 --insecure-registry docker-hub:5000
+        -H unix:///var/run/docker.sock -H tcp://0.0.0.0:2375 --insecure-registry docker-hub:5043 --insecure-registry docker-hub:5000
       '';
     };
     virtualbox = {
@@ -35,7 +36,7 @@
     domain = "domain";
     proxy = [ "proxyhost:port" ];
     extraConfig = ''
-      NoProxy *.danskenet.net docker-hub
+      NoProxy *.danskenet.net docker-hub nixdev
     '';
   };
 }
