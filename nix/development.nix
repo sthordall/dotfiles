@@ -45,7 +45,7 @@
     dotnetPackages.FSharpFormatting
 
     # Tex
-    texLiveFull
+    texlive.combined.scheme-full
   ];
 
   services = {
