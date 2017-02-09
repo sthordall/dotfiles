@@ -38,11 +38,14 @@
     # .NET
     mono46
     fsharp
-		dotnetPackages.FSharpAutoComplete
-		dotnetPackages.FSharpCompilerCodeDom
-		dotnetPackages.FSharpCompilerService
-		dotnetPackages.FSharpData
-		dotnetPackages.FSharpFormatting
+    dotnetPackages.FSharpAutoComplete
+    dotnetPackages.FSharpCompilerCodeDom
+    dotnetPackages.FSharpCompilerService
+    dotnetPackages.FSharpData
+    dotnetPackages.FSharpFormatting
+
+    # Tex
+    texLiveFull
   ];
 
   services = {
