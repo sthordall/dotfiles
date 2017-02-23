@@ -28,6 +28,7 @@
     wget
     htop
     gnumake
+    pgadmin
 
     # Haskell
     stack
