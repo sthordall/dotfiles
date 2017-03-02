@@ -29,6 +29,7 @@
     htop
     gnumake
     pgadmin
+    meld
 
     # Haskell
     stack
