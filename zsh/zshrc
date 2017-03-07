@@ -9,6 +9,11 @@ ZSH_THEME="amuse"
 # Changes format of command execution time stamp shown in the history command output.
 HIST_STAMPS="dd/mm/yyyy"
 
-plugins=(git git-extras npm osx colored-man-pages)
+plugins=(git git-extras npm osx colored-man-pages docker github)
+
+# Paths
+export DEV=$HOME/Development
+export GOPATH=$DEV/go
+export PATH=$PATH:$GOPATH/bin
 
 source $ZSH/oh-my-zsh.sh
