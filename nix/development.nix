@@ -34,8 +34,12 @@
     # Haskell
     stack
 
+    # Go
+    go
+
     # Python
     python
+    python27Packages.pygments
 
     # .NET
     mono46
