@@ -30,6 +30,8 @@
     gnumake
     pgadmin
     meld
+    unzip
+    dos2unix
 
     # Haskell
     stack

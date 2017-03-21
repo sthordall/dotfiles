@@ -21,12 +21,6 @@
     xfce.gigolo
     xfce.xfce4taskmanager
 
-    # Desktop Environment (Xmonad Someday)
-    #dmenu
-    #haskellPackages.xmobar
-    #haskellPackages.xmonad
-    #haskellPackages.xmonadContrib
-    #haskellPackages.xmonadExtras
   ];
 
   services.xserver = {
