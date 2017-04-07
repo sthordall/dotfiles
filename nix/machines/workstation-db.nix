@@ -4,7 +4,6 @@
   virtualisation = {
     docker = {
       enable = true;
-      socketActivation = true;
       extraOptions = ''
         -H unix:///var/run/docker.sock -H tcp://0.0.0.0:2375 --insecure-registry docker-hub:5043 --insecure-registry docker-hub:5000
       '';
