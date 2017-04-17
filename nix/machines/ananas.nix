@@ -6,6 +6,11 @@
       ../environments/cli.nix
     ];
 
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi = {
+    canTouchEfiVariables = true;
+  };
+
   users.extraUsers.sthordall = {
     isNormalUser = true;
     home = "/home/sthordall";
