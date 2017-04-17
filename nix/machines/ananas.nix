@@ -4,42 +4,29 @@
   imports =
     [
       ../environments/cli.nix
-      ../environments/desktop.nix
-      ../environments/development.nix
     ];
 
   users.extraUsers.sthordall = {
     isNormalUser = true;
     home = "/home/sthordall";
     description = "Stephan Thordal";
-    extraGroups = [ "wheel" "networkmanager" "docker" "vboxsf" ];
+    extraGroups = [ "wheel" "networkmanager" "docker" ];
     initialPassword = "sthordall";
-  };
-
-  boot = {
-    loader = {
-      grub = {
-        enable = true;
-        version = 2;
-        device = "/dev/sda";
-      };
-    };
   };
 
   virtualisation = {
     docker = {
       enable = true;
+      extraOptions = ''-H unix:///var/run/docker.sock -H tcp://0.0.0.0:2375'';
     };
     virtualbox = {
-      host.enable = false;
-      guest.enable = true;
+      host.enable = true;
+      guest.enable = false;
     };
   };
 
-  nixpkgs.config.virtualbox.enableExtensionPack = true;
-
   networking = {
-    hostName = "nixdev";
+    hostName = "ananas";
     firewall.enable = false;
     networkmanager.enable = true;
   };

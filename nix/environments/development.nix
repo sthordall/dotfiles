@@ -1,4 +1,3 @@
-
 { config, pkgs, ... }:
 
 {
@@ -11,27 +10,10 @@
   };
 
   environment.systemPackages = with pkgs; [
-    # Shell
-    zsh
-    oh-my-zsh
-    zsh-completions
-    nix-zsh-completions
-
-    # Vim
-    vimHugeX
-
-    # Git
-    git
-
     # Tools
-    curl
-    wget
-    htop
     gnumake
     pgadmin
     meld
-    unzip
-    dos2unix
 
     # Haskell
     stack
@@ -51,12 +33,5 @@
     dotnetPackages.FSharpCompilerService
     dotnetPackages.FSharpData
     dotnetPackages.FSharpFormatting
-
-    # Tex
-    texlive.combined.scheme-full
   ];
-
-  services = {
-    openssh.enable = true;
-  };
 }

@@ -5,17 +5,12 @@
 
   imports =
     [
-      # Machine Specific (Choose machine nix file)
+      ./hardware-configuration.nix
+
+      # Machine Specific (Uncomment machine nix file)
       #./nix/machines/workstation-db.nix
       #./nix/machines/workstation-home.nix
-
-      # Common
-      ./hardware-configuration.nix
-      ./nix/bootloader.nix
-      ./nix/desktop.nix
-      ./nix/development.nix
-      ./nix/fonts.nix
-      ./nix/users.nix
+      #./nix/machines/ananas.nix
     ];
 
   nixpkgs.config = {
