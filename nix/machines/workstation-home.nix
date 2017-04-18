@@ -29,6 +29,7 @@
   virtualisation = {
     docker = {
       enable = true;
+      listenOptions = [ "/var/run/docker.sock" "0.0.0.0:2375" ];
     };
     virtualbox = {
       host.enable = false;

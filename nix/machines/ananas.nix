@@ -22,7 +22,7 @@
   virtualisation = {
     docker = {
       enable = true;
-      extraOptions = ''-H unix:///var/run/docker.sock -H tcp://0.0.0.0:2375'';
+      listenOptions = [ "/var/run/docker.sock" "0.0.0.0:2375" ];
     };
     virtualbox = {
       host.enable = true;
