@@ -18,7 +18,6 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'elmcast/elm-vim'
 Plugin 'tpope/vim-surround'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'mattn/webapi-vim'
 Plugin 'mattn/gist-vim'
 Plugin 'fsharp/vim-fsharp'
 Plugin 'omnisharp/omnisharp-vim'
@@ -38,8 +37,6 @@ set cindent
 set tw=80
 set ruler
 set incsearch
-set splitbelow
-set splitright
 set relativenumber
 set list " Show tabs and trailing spaces
 
@@ -49,10 +46,11 @@ map <C-n> :NERDTreeToggle<CR>
 " Buffer Nav Mapping
 map <C-l> :bnext<CR>
 map <C-h> :bprevious<CR>
+map <C-j> :bdelete<CR>
 
 " Editing mappings
 " F3 -> delete trailing whitespaces
-:nnoremap <silent> <F3> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
+nnoremap <silent> <F3> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
 
 " Solarized config
 syntax enable
@@ -92,3 +90,7 @@ map <up> <nop>
 map <down> <nop>
 map <left> <nop>
 map <right> <nop>
+imap <up> <nop>
+imap <down> <nop>
+imap <left> <nop>
+imap <right> <nop>
