@@ -18,3 +18,6 @@ ln -fs $DOTFILES_DIR/vim/vimrc $HOME_DIR/.vimrc
 
 # Zsh
 ln -fs $DOTFILES_DIR/zsh/zshrc $HOME_DIR/.zshrc
+
+# XResources
+ln -fs $DOTFILES_DIR/x/Xresources $HOME_DIR/.Xresources
