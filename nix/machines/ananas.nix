@@ -7,9 +7,8 @@
     ];
 
   boot.loader.systemd-boot.enable = true;
-  boot.loader.efi = {
-    canTouchEfiVariables = true;
-  };
+  boot.loader.efi.canTouchEfiVariables = true;
+  boot.supportedFilesystems = [ "zfs" ];
 
   users.extraUsers.sthordall = {
     isNormalUser = true;
@@ -32,6 +31,7 @@
 
   networking = {
     hostName = "ananas";
+    hostId = "1337beef";
     firewall.enable = false;
     networkmanager.enable = true;
   };
