@@ -4,11 +4,16 @@
   imports =
     [
       ../environments/cli.nix
+      ../environments/server.nix
     ];
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.supportedFilesystems = [ "zfs" ];
+
+  services.zfs.autoSnapshot.enable = true;
+  services.zfs.autoScrub.enable = true;
+  services.zfs.autoScrub.interval = "daily";
 
   users.extraUsers.sthordall = {
     isNormalUser = true;
