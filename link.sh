@@ -13,6 +13,9 @@ sed -e "s/AUTHORNAME/$USERNAME/g" \
 ln -fs $DOTFILES_DIR/git/gitconfig $HOME_DIR/.gitconfig
 ln -fs $DOTFILES_DIR/git/gitignore $HOME_DIR/.gitignore
 
+# Scripts
+ln -fs $DOTFILES_DIR/scripts $HOME_DIR/.scripts
+
 # Vim
 ln -fs $DOTFILES_DIR/vim/vimrc $HOME_DIR/.vimrc
 

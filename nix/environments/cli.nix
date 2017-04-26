@@ -11,6 +11,7 @@
     curl
     wget
     htop
+    rclone
 
     # Shell
     zsh

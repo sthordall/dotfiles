@@ -19,6 +19,6 @@ alias -g nixqu='nix-env -f https://github.com/NixOS/nixpkgs-channels/archive/nix
 # Paths
 export DEV=$HOME/Development
 export GOPATH=$DEV/go
-export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOPATH/bin:$HOME/.scripts
 
 source $ZSH/oh-my-zsh.sh

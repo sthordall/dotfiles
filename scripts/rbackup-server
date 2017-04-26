@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+rbackup /mnt/backup backup
+rbackup /mnt/documents documents
+rbackup /mnt/media/books media/books
+rbackup /mnt/media/photos media/photos
+rbackup /mnt/media/videos/projects media/videos/projects
+rbackup /mnt/media/videos/recorded media/videos/recorded
