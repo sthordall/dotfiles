@@ -37,13 +37,19 @@ set cindent
 set tw=80
 set ruler
 set incsearch
+set hlsearch
 set relativenumber
 set list " Show tabs and trailing spaces
+
+" Leaderkey
+let mapleader = ","
+
 
 " NERDTree Mapping
 map <C-n> :NERDTreeToggle<CR>
 
-" Buffer Nav Mapping
+" Nav Mappings
+nmap <leader><leader> :nohlsearch<CR>
 map <C-l> :bnext<CR>
 map <C-h> :bprevious<CR>
 map <C-j> :bdelete<CR>
@@ -85,9 +91,6 @@ set guioptions-=m  "remove menu bar
 set guioptions-=T  "remove toolbar
 set guioptions-=r  "remove right-hand scroll bar
 set guioptions-=L  "remove left-hand scroll bar
-
-" Leaderkey
-let mapleader = ","
 
 " No arrow keys!
 map <up> <nop>
