@@ -16,6 +16,7 @@ function linkdot {
 
 linkdot git/gitconfig .gitconfig
 linkdot git/gitignore .gitignore
+linkdot scripts .scripts
 linkdot tmux/tmux.conf .tmux.conf
 linkdot vim/vimrc .vimrc
 linkdot x/Xresources .Xresources

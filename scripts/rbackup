@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+rclone sync $1 crypt:$HOST/$2

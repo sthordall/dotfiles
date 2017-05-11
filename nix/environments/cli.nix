@@ -11,6 +11,7 @@
     htop
     nix-zsh-completions
     oh-my-zsh
+    rclone
     tmux
     unzip
     vimHugeX

@@ -37,13 +37,19 @@ set cindent
 set tw=80
 set ruler
 set incsearch
+set hlsearch
 set relativenumber
 set list " Show tabs and trailing spaces
+
+" Leaderkey
+let mapleader = ","
+
 
 " NERDTree Mapping
 map <C-n> :NERDTreeToggle<CR>
 
-" Buffer Nav Mapping
+" Nav Mappings
+nmap <leader><leader> :nohlsearch<CR>
 map <C-l> :bnext<CR>
 map <C-h> :bprevious<CR>
 map <C-j> :bdelete<CR>
@@ -60,8 +66,12 @@ call togglebg#map("<F1>") " Background toggle
 
 " Airline config
 let g:airline_theme='solarized'
-let g:airline_powerline_fonts=1
+let g:airline_powerline_fonts=0
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = ' '
+let g:airline#extensions#tabline#right_sep = ' '
+let g:airline#extensions#tabline#right_alt_sep = ' '
 
 " Syntastic config
 set statusline+=%#warningmsg#
@@ -81,9 +91,6 @@ set guioptions-=m  "remove menu bar
 set guioptions-=T  "remove toolbar
 set guioptions-=r  "remove right-hand scroll bar
 set guioptions-=L  "remove left-hand scroll bar
-
-" Leaderkey
-let mapleader = ","
 
 " No arrow keys!
 map <up> <nop>
