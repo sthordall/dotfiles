@@ -34,13 +34,6 @@
       extraGroups = [ "users" "media" ];
       initialPassword = "stabbynie";
     };
-    docker = {
-      uid = 201;
-      isSystemUser = true;
-      group = "docker";
-      extraGroups = [ "media" ];
-      initialPassword = "docker";
-    };
     media = {
       uid = 301;
       isSystemUser = true;
