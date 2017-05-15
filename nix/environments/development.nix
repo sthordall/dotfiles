@@ -1,14 +1,11 @@
 { config, pkgs, ... }:
 
+let
+  unstable = (import (fetchTarball https://github.com/NixOS/nixpkgs-channels/archive/nixos-unstable.tar.gz) {
+    inherit (config.nixpkgs) config system;
+  }).pkgs;
+in
 {
-  nixpkgs.config = {
-    packageOverrides = super: let self = super.pkgs; in {
-      fsharp = super.fsharp.override {
-        mono = pkgs.mono46;
-      };
-    };
-  };
-
   environment.systemPackages = with pkgs; [
     # Tools
     gnumake
@@ -16,7 +13,7 @@
     meld
 
     # Haskell
-    stack
+    unstable.stack
 
     # Go
     go
@@ -27,7 +24,7 @@
 
     # .NET
     mono46
-    fsharp
+    unstable.fsharp41
     dotnetPackages.FSharpAutoComplete
     dotnetPackages.FSharpCompilerCodeDom
     dotnetPackages.FSharpCompilerService
