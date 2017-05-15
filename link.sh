@@ -4,23 +4,20 @@ EMAIL=$2
 HOME_DIR=$3
 DOTFILES_DIR=$4
 
-# Git
+# setup git config
 sed -e "s/AUTHORNAME/$USERNAME/g" \
     -e "s/AUTHOREMAIL/$EMAIL/g" \
     -e "s/GITHUB_USER/$USERNAME/g" \
     git/gitconfig.example > git/gitconfig
 
-ln -fs $DOTFILES_DIR/git/gitconfig $HOME_DIR/.gitconfig
-ln -fs $DOTFILES_DIR/git/gitignore $HOME_DIR/.gitignore
+function linkdot {
+  ln -fs $DOTFILES_DIR/$1 $HOME_DIR/$2
+}
 
-# Scripts
-ln -fs $DOTFILES_DIR/scripts $HOME_DIR/.scripts
-
-# Vim
-ln -fs $DOTFILES_DIR/vim/vimrc $HOME_DIR/.vimrc
-
-# Zsh
-ln -fs $DOTFILES_DIR/zsh/zshrc $HOME_DIR/.zshrc
-
-# XResources
-ln -fs $DOTFILES_DIR/x/Xresources $HOME_DIR/.Xresources
+linkdot git/gitconfig .gitconfig
+linkdot git/gitignore .gitignore
+linkdot scripts .scripts
+linkdot tmux/tmux.conf .tmux.conf
+linkdot vim/vimrc .vimrc
+linkdot x/Xresources .Xresources
+linkdot zsh/zshrc .zshrc
