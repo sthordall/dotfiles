@@ -27,12 +27,7 @@
     enable = true;
     layout = "us";
     displayManager.lightdm.enable = true;
-    desktopManager.xfce = {
-      enable = true;
-      thunarPlugins = with pkgs.xfce; [
-        thunar-archive-plugin thunar_volman
-      ];
-    };
+    desktopManager.xfce.enable = true;
   };
 
   fonts = {
