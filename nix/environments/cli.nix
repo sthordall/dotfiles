@@ -6,6 +6,7 @@
 
   environment.systemPackages = with pkgs; [
     curl
+    davfs2
     dos2unix
     git
     htop

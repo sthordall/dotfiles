@@ -36,21 +36,23 @@ values."
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
-     fsharp
-     emacs-lisp
+     auto-completion (haskell :variables haskell-completion-backend 'intero)
+     docker
      elm
+     emacs-lisp
+     fsharp
      git
-     yaml
      haskell
      helm
+     intero
      markdown
-     org
-     syntax-checking
      nixos
-     themes-megapack
-     docker
+     org
      shell-scripts
+     syntax-checking
+     themes-megapack
      xkcd
+     yaml
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -85,7 +87,7 @@ values."
    ;; This variable has no effect if Emacs is launched with the parameter
    ;; `--insecure' which forces the value of this variable to nil.
    ;; (default t)
-   dotspacemacs-elpa-https t
+   dotspacemacs-elpa-https nil
    ;; Maximum allowed time in seconds to contact an ELPA repository.
    dotspacemacs-elpa-timeout 5
    ;; If non nil then spacemacs will check for updates at startup
@@ -134,11 +136,11 @@ values."
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
-   dotspacemacs-default-font '("Source Code Pro"
-                               :size 13
+   dotspacemacs-default-font '("Meslo LG M for Powerline RegularForPowerline"
+                               :size 11
                                :weight normal
                                :width normal
-                               :powerline-scale 1.1)
+                               :powerline-scale 1.0)
    ;; The leader key
    dotspacemacs-leader-key "SPC"
    ;; The key used for Emacs commands (M-x) (after pressing on the leader key).
@@ -295,6 +297,11 @@ values."
    dotspacemacs-whitespace-cleanup nil
    ))
 
+(defun setup-indent ()
+  (setq-local indent-tabs-mode nil)
+  (setq-local fsharp-indent-offset 2)
+  )
+
 (defun dotspacemacs/user-init ()
   "Initialization function for user code.
 It is called immediately after `dotspacemacs/init', before layer configuration
@@ -302,6 +309,7 @@ executes.
  This function is mostly useful for variables that need to be set
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
+  (add-hook 'prog-mode-hook 'setup-indent)
   )
 
 (defun dotspacemacs/user-config ()
