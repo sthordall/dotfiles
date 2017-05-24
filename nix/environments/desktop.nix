@@ -2,23 +2,22 @@
 
 {
   environment.systemPackages = with pkgs; [
-    # Web
     chromium
 
-    # Terminal
+    despotify vlc
+
     rxvt_unicode
 
-    # Xfce 4
-    xfce.xfce4_cpufreq_plugin
-    xfce.xfce4_systemload_plugin
-    xfce.xfce4_xkb_plugin
-    xfce.xfce4_embed_plugin
+    font-awesome-ttf
+    numix-gtk-theme
+    paper-icon-theme
+    xfce.gigolo
+    xfce.gtk_xfce_engine
     xfce.xfce4_battery_plugin
-    xfce.xfce4_verve_plugin
     xfce.xfce4_clipman_plugin
     xfce.xfce4_datetime_plugin
-    xfce.xfce4_netload_plugin
-    xfce.gigolo
+    xfce.xfce4_systemload_plugin
+    xfce.xfce4_xkb_plugin
     xfce.xfce4taskmanager
 
   ];

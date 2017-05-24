@@ -31,6 +31,7 @@
   # - Remember to register user under 'nix/users.nix'
   system.activationScripts = {
     linkDotfiles = {
+      deps = ["users"];
       text = ''
         export PATH=$PATH:/run/current-system/sw/bin/
 
@@ -54,11 +55,9 @@
         fi
         chown -R sthordall:users /home/sthordall/.emacs.d
 
-
         cd /etc/nixos
         ./link.sh sthordall stephan@thordal.io /home/sthordall /etc/nixos
       '';
-      deps = ["users"];
     };
   };
 }
