@@ -9,6 +9,7 @@
     rxvt_unicode
 
     font-awesome-ttf
+    gtk-engine-murrine
     numix-gtk-theme
     paper-icon-theme
     xfce.gigolo
