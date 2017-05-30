@@ -20,7 +20,6 @@
     xfce.xfce4_systemload_plugin
     xfce.xfce4_xkb_plugin
     xfce.xfce4taskmanager
-
   ];
 
   services.xserver = {

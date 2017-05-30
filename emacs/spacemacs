@@ -310,6 +310,9 @@ executes.
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
   (add-hook 'prog-mode-hook 'setup-indent)
+  (with-eval-after-load 'org
+    (setq org-agenda-files '("~/org"))
+    )
   )
 
 (defun dotspacemacs/user-config ()
@@ -319,6 +322,17 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
+  (with-eval-after-load 'projectile
+    (custom-set-variables
+     '(projectile-globally-ignored-files
+       (append '("*.dll" "*.exe" "*.mdb" "*.pdb" "*.xml" "*.XML"
+                 "*.sigdata" "*.optdata" "*.gitignore" "*.gitattributes" "*.psmdcp"
+                 "*.html" "*.srcsrv" "*.nupkg" "*.png" "*.jpg" "*.jpeg" "*.gif" "*.svg")
+               projectile-globally-ignored-files))
+     '(projectile-globally-ignored-directories
+       (append '("bin" "obj" "Debug" "Release" "build" ".git" "packages")
+               projectile-globally-ignored-directories))
+     ))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
