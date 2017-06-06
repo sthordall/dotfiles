@@ -17,7 +17,7 @@ in
     unstable.stack
 
     # Go
-    go
+    go hugo
 
     # Python
     python
