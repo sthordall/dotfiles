@@ -11,7 +11,7 @@ in
     gnumake
     pgadmin
     meld
-    unstable.emacs
+    emacs
 
     # Haskell
     unstable.stack
