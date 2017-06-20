@@ -8,6 +8,7 @@
 
     rxvt_unicode
 
+    libnotify
     font-awesome-ttf
     gtk-engine-murrine
     numix-gtk-theme
@@ -17,6 +18,7 @@
     xfce.xfce4_battery_plugin
     xfce.xfce4_clipman_plugin
     xfce.xfce4_datetime_plugin
+    xfce.xfce4_genmon_plugin
     xfce.xfce4_systemload_plugin
     xfce.xfce4_xkb_plugin
     xfce.xfce4taskmanager
