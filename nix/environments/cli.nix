@@ -10,6 +10,7 @@
     dos2unix
     git
     htop
+    jq
     nix-zsh-completions
     oh-my-zsh
     rclone
