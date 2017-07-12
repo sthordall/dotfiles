@@ -19,8 +19,6 @@ Plugin 'elmcast/elm-vim'
 Plugin 'tpope/vim-surround'
 Plugin 'mattn/gist-vim'
 Plugin 'fsharp/vim-fsharp'
-Plugin 'omnisharp/omnisharp-vim'
-Plugin 'oranget/vim-csharp'
 
 call vundle#end()
 filetype plugin indent on
