@@ -18,6 +18,7 @@
     unzip
     vimHugeX
     wget
+    xclip
     zsh
     zsh-completions
   ];

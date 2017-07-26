@@ -6,9 +6,12 @@
 
     despotify vlc
 
+    slack discord
+
     rxvt_unicode
 
     libnotify
+    librsvg
     font-awesome-ttf
     gtk-engine-murrine
     numix-gtk-theme

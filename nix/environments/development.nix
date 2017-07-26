@@ -15,6 +15,9 @@ in
 
     # Haskell
     unstable.stack
+    ghc
+    cabal-install
+    cabal2nix
 
     # Go
     go hugo
