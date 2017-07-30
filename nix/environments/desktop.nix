@@ -2,13 +2,11 @@
 
 {
   environment.systemPackages = with pkgs; [
-    chromium vivaldi
+    chromium vivaldi firefox
 
-    despotify vlc
+    despotify vlc steam
 
     slack discord
-
-    rxvt_unicode
 
     libnotify
     librsvg

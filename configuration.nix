@@ -28,7 +28,6 @@
 
   # Link dotfiles to primary user
   # - Script args: username, email, home_dir
-  # - Remember to register user under 'nix/users.nix'
   system.activationScripts = {
     linkDotfiles = {
       deps = ["users"];
