@@ -24,7 +24,6 @@ let
     elm-compiler
     elm-format-linked
     elm-make
-    nodePackages.elm-oracle
     elm-package
     elm-reactor
     elm-repl
