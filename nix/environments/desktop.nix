@@ -4,7 +4,7 @@
   environment.systemPackages = with pkgs; [
     chromium vivaldi firefox
 
-    despotify vlc steam
+    despotify vlc
 
     slack discord
 
