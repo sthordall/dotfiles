@@ -14,6 +14,7 @@
     nix-zsh-completions
     oh-my-zsh
     rclone
+    taskwarrior
     tmux
     unzip
     vimHugeX
