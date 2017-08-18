@@ -39,11 +39,12 @@
           ln -sf ${pkgs.oh-my-zsh}/share/oh-my-zsh /home/sthordall/.oh-my-zsh
         fi
 
-        if [ ! -d /home/sthordall/.vim/autoload/plug.vim ]
+        if [ ! -d /home/sthordall/.vim/autoload ]
         then
-          curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+          curl -fLo /home/sthordall/.vim/autoload/plug.vim --create-dirs \
             https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
         fi
+        chown -R sthordall:users /home/sthordall/.vim
 
         if [ ! -d /home/sthordall/.emacs.d ]
         then

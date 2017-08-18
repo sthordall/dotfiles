@@ -1,5 +1,3 @@
-syntax on
-filetype plugin indent on
 set nocompatible
 
 call plug#begin('~/.vim/plugged')
@@ -16,9 +14,11 @@ Plug 'tyrannicaltoucan/vim-quantum'
 Plug 'tpope/vim-fugitive'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'airblade/vim-gitgutter'
-Plug 'fsharp/vim-fsharp' { 'for': 'fsharp', 'do': 'make fsautocomplete' }
+Plug 'fsharp/vim-fsharp', { 'for': 'fsharp', 'do': 'make fsautocomplete' }
 Plug 'elmcast/elm-vim'
 Plug 'junegunn/vim-easy-align'
+Plug 'flazz/vim-colorschemes'
+Plug 'junegunn/goyo.vim'
 call plug#end()
 
 " Preference
@@ -33,9 +33,8 @@ set tw=80
 set incsearch
 set hlsearch
 set relativenumber
-
 set background=dark
-colorscheme default
+colorscheme quantum
 
 " Mappings
 let mapleader=","
@@ -73,8 +72,11 @@ let g:ctrlp_show_hidden = 1
 let g:ctrlp_path_nolim = 1
 let g:ctrlp_working_path_mode = ''
 
+" EasyAlign
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
+
 " NERDTree
-let g:NERDTreeWinSize = 40
 let g:NERDTreeMinimalUI = 1
 let g:NERDTreeShowHidden = 1
 
@@ -98,7 +100,7 @@ let g:fsharp_map_gotodecl = 'g'
 let g:fsharp_map_gobackfromdecl = 'b'
 
 " GUI
-set guifont=Roboto\ Mono\ for\ Powerline\ Medium\ 12
+set guifont=Hack\ 12
 set guioptions-=m  "remove menu bar
 set guioptions-=T  "remove toolbar
 set guioptions-=r  "remove right-hand scroll bar
