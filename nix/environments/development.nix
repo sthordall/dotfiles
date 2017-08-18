@@ -28,6 +28,9 @@ let
     elm-reactor
     elm-repl
 
+    # JS
+    nodejs
+
     # Haskell
     unstable.stack
     ghc

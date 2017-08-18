@@ -39,11 +39,10 @@
           ln -sf ${pkgs.oh-my-zsh}/share/oh-my-zsh /home/sthordall/.oh-my-zsh
         fi
 
-        if [ ! -d /home/sthordall/.vim/bundle/Vundle.vim ]
+        if [ ! -d /home/sthordall/.vim/autoload/plug.vim ]
         then
-          mkdir -p /home/sthordall/.vim/bundle
-          git clone https://github.com/VundleVim/Vundle.vim.git \
-            /home/sthordall/.vim/bundle/Vundle.vim
+          curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+            https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
         fi
 
         if [ ! -d /home/sthordall/.emacs.d ]

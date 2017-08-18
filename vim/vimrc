@@ -1,6 +1,24 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+" call plug#begin('~/.vim/plugged')
+
+" Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+" Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+" Plug 'scrooloose/syntastic'
+" Plug 'ctrlpvim/ctrlp.vim'
+" Plug 'tpope/vim-surround'
+" Plug 'scrooloose/nerdcommenter'
+" Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline-themes'
+" Plug 'tyrannicaltoucan/vim-quantum'
+" Plug 'tpope/vim-fugitive'
+" Plug 'terryma/vim-multiple-cursors'
+" Plug 'airblade/vim-gitgutter'
+
+
+" Plug 'junegunn/vim-easy-align'
+" call plug#end()
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 "
@@ -13,8 +31,6 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-dispatch'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
 Plugin 'elmcast/elm-vim'
 Plugin 'tpope/vim-surround'
 Plugin 'mattn/gist-vim'
