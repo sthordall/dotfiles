@@ -1,47 +1,27 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
-
-" call plug#begin('~/.vim/plugged')
-
-" Plug 'Shougo/vimproc.vim', {'do' : 'make'}
-" Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-" Plug 'scrooloose/syntastic'
-" Plug 'ctrlpvim/ctrlp.vim'
-" Plug 'tpope/vim-surround'
-" Plug 'scrooloose/nerdcommenter'
-" Plug 'vim-airline/vim-airline'
-" Plug 'vim-airline/vim-airline-themes'
-" Plug 'tyrannicaltoucan/vim-quantum'
-" Plug 'tpope/vim-fugitive'
-" Plug 'terryma/vim-multiple-cursors'
-" Plug 'airblade/vim-gitgutter'
-
-
-" Plug 'junegunn/vim-easy-align'
-" call plug#end()
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-"
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/syntastic'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'tpope/vim-sensible'
-Plugin 'tpope/vim-dispatch'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'elmcast/elm-vim'
-Plugin 'tpope/vim-surround'
-Plugin 'mattn/gist-vim'
-Plugin 'fsharp/vim-fsharp'
-Plugin 'omnisharp/omnisharp-vim'
-Plugin 'oranget/vim-csharp'
-
-call vundle#end()
-filetype plugin indent on
-
 syntax on
+filetype plugin indent on
+set nocompatible
+
+call plug#begin('~/.vim/plugged')
+Plug 'tpope/vim-sensible'
+Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'scrooloose/syntastic'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'tpope/vim-surround'
+Plug 'scrooloose/nerdcommenter'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'tyrannicaltoucan/vim-quantum'
+Plug 'tpope/vim-fugitive'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'airblade/vim-gitgutter'
+Plug 'fsharp/vim-fsharp' { 'for': 'fsharp', 'do': 'make fsautocomplete' }
+Plug 'elmcast/elm-vim'
+Plug 'junegunn/vim-easy-align'
+call plug#end()
+
+" Preference
 set ignorecase
 set smartcase
 set nu
@@ -50,57 +30,25 @@ set shiftwidth=2
 set expandtab
 set cindent
 set tw=80
-set ruler
 set incsearch
 set hlsearch
 set relativenumber
-set list " Show tabs and trailing spaces
 
-" Leaderkey
-let mapleader = ","
+set background=dark
+colorscheme default
 
-
-" NERDTree Mapping
-map <C-n> :NERDTreeToggle<CR>
-
-" Nav Mappings
+" Mappings
+let mapleader=","
+map <space> <leader>
+map <space><space> <leader><leader>
+nnoremap <leader>t :NERDTreeToggle<CR>
+nnoremap <leader>f :CtrlP<CR>
+nnoremap <leader>b :CtrlPBuffer<CR>
+nnoremap <leader>/ "zyiw:vimgrep /<C-r>z/g **/*<CR>:cw<CR>
 nmap <leader><leader> :nohlsearch<CR>
 map <C-l> :bnext<CR>
 map <C-h> :bprevious<CR>
 map <C-j> :bdelete<CR>
-
-" Editing mappings
-" F3 -> delete trailing whitespaces
-nnoremap <silent> <F3> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
-
-" Airline config
-let g:airline_powerline_fonts=0
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = ' '
-let g:airline#extensions#tabline#right_sep = ' '
-let g:airline#extensions#tabline#right_alt_sep = ' '
-
-" Syntastic config
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
-" Elm
-let g:elm_syntastic_show_warnings = 1
-
-" GUI Config
-set guifont=Roboto\ Mono\ for\ Powerline\ Medium\ 12
-set guioptions-=m  "remove menu bar
-set guioptions-=T  "remove toolbar
-set guioptions-=r  "remove right-hand scroll bar
-set guioptions-=L  "remove left-hand scroll bar
-
-" No arrow keys!
 map <up> <nop>
 map <down> <nop>
 map <left> <nop>
@@ -109,3 +57,49 @@ imap <up> <nop>
 imap <down> <nop>
 imap <left> <nop>
 imap <right> <nop>
+
+" Airline
+let g:airline_powerline_fonts=0
+let g:airline_theme='quantum'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = ' '
+let g:airline#extensions#tabline#right_sep = ' '
+let g:airline#extensions#tabline#right_alt_sep = ' '
+
+" CtrlP
+let g:ctrlp_cmd = 'CtrlPCurWD'
+let g:ctrlp_show_hidden = 1
+let g:ctrlp_path_nolim = 1
+let g:ctrlp_working_path_mode = ''
+
+" NERDTree
+let g:NERDTreeWinSize = 40
+let g:NERDTreeMinimalUI = 1
+let g:NERDTreeShowHidden = 1
+
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+
+" Elm
+let g:elm_syntastic_show_warnings = 1
+
+" F#
+let g:syntastic_fsharp_checkers=['syntax']
+let g:fsharp_only_check_errors_on_write = 0
+let g:fsharp_completion_helptext = 1
+let g:fsharp_map_keys = 1
+let g:fsharp_map_gotodecl = 'g'
+let g:fsharp_map_gobackfromdecl = 'b'
+
+" GUI
+set guifont=Roboto\ Mono\ for\ Powerline\ Medium\ 12
+set guioptions-=m  "remove menu bar
+set guioptions-=T  "remove toolbar
+set guioptions-=r  "remove right-hand scroll bar
+set guioptions-=L  "remove left-hand scroll bar
