@@ -23,17 +23,20 @@ Plug 'ervandew/supertab'
 call plug#end()
 
 " Preference
+set smarttab
+set expandtab
+set tabstop=2
+set smartindent
+set autoindent
 set ignorecase
 set smartcase
 set nu
-set tabstop=2
 set shiftwidth=2
-set expandtab
-set cindent
 set tw=80
 set incsearch
 set hlsearch
 set relativenumber
+set nocursorline
 set background=dark
 colorscheme quantum
 
@@ -80,6 +83,9 @@ nmap ga <Plug>(EasyAlign)
 " NERDTree
 let g:NERDTreeMinimalUI = 1
 let g:NERDTreeShowHidden = 1
+
+" SuperTab
+let g:SuperTabDefaultCompletionType = "context"
 
 " Syntastic
 set statusline+=%#warningmsg#
