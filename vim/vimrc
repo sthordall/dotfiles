@@ -19,6 +19,7 @@ Plug 'elmcast/elm-vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'flazz/vim-colorschemes'
 Plug 'junegunn/goyo.vim'
+Plug 'ervandew/supertab'
 call plug#end()
 
 " Preference
@@ -40,7 +41,7 @@ colorscheme quantum
 let mapleader=","
 map <space> <leader>
 map <space><space> <leader><leader>
-nnoremap <leader>t :NERDTreeToggle<CR>
+nnoremap <leader><Tab> :NERDTreeToggle<CR>
 nnoremap <leader>f :CtrlP<CR>
 nnoremap <leader>b :CtrlPBuffer<CR>
 nnoremap <leader>/ "zyiw:vimgrep /<C-r>z/g **/*<CR>:cw<CR>
@@ -98,6 +99,7 @@ let g:fsharp_completion_helptext = 1
 let g:fsharp_map_keys = 1
 let g:fsharp_map_gotodecl = 'g'
 let g:fsharp_map_gobackfromdecl = 'b'
+let g:fsharp_helptext_comments = 1
 
 " GUI
 set guifont=Hack\ 12
