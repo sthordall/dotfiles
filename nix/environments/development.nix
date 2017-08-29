@@ -18,6 +18,7 @@ let
     pgadmin
     meld
     emacs
+    gcc
 
     # Elm
     elm
