@@ -11,14 +11,12 @@ Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdcommenter'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'tyrannicaltoucan/vim-quantum'
 Plug 'tpope/vim-fugitive'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'airblade/vim-gitgutter'
 Plug 'fsharp/vim-fsharp', { 'for': 'fsharp', 'do': 'make fsautocomplete' }
 Plug 'elmcast/elm-vim'
 Plug 'junegunn/vim-easy-align'
-Plug 'flazz/vim-colorschemes'
 Plug 'junegunn/goyo.vim'
 Plug 'ervandew/supertab'
 Plug 'eagletmt/ghcmod-vim'
@@ -26,6 +24,7 @@ Plug 'eagletmt/neco-ghc'
 Plug 'alx741/vim-hindent'
 Plug 'dag/vim2hs'
 Plug 'blindFS/vim-taskwarrior'
+Plug 'dracula/vim'
 call plug#end()
 " }}}
 
@@ -46,14 +45,14 @@ set relativenumber
 set nocursorline
 set background=dark
 set lazyredraw
-set listchars=tab:•\ ,trail:•,extends:»,precedes:« 
+set listchars=tab:•\ ,trail:•,extends:»,precedes:«
 set list
 set foldmethod=marker
 set foldenable
 set foldlevelstart=10
 set foldnestmax=10
-colorscheme quantum
-hi Conceal ctermfg=7 ctermbg=8 guifg=LightGray guibg=#263238
+color dracula
+hi Conceal ctermfg=7 ctermbg=242 guifg=LightGrey guibg=#282a36
 " }}}
 
 " Mappings {{{
@@ -125,7 +124,6 @@ set wildignorecase
 
 " Airline {{{
 let g:airline_powerline_fonts=0
-let g:airline_theme='quantum'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = ' '
