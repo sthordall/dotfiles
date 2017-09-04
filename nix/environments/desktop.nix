@@ -8,6 +8,8 @@
 
     slack discord
 
+    rxvt_unicode urxvt_vtwheel
+
     libnotify
     librsvg
     font-awesome-ttf
