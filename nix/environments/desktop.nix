@@ -31,6 +31,7 @@
   services.xserver = {
     enable = true;
     layout = "us";
+    xkbOptions = "caps:escape";
     displayManager.lightdm.enable = true;
     desktopManager.xfce.enable = true;
   };
