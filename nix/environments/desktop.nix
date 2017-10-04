@@ -2,9 +2,9 @@
 
 {
   environment.systemPackages = with pkgs; [
-    chromium vivaldi firefox
+    chromium firefox
 
-    despotify vlc
+    vlc
 
     slack discord
 
