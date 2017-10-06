@@ -11,6 +11,7 @@
     git
     htop
     jq
+    mosh
     nix-zsh-completions
     oh-my-zsh
     rclone
