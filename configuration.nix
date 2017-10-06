@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  system.stateVersion = "17.03";
+  system.stateVersion = "17.09";
 
   imports =
     [
@@ -28,7 +28,6 @@
 
   # Link dotfiles to primary user
   # - Script args: username, email, home_dir
-  # - Remember to register user under 'nix/users.nix'
   system.activationScripts = {
     linkDotfiles = {
       deps = ["users"];
@@ -40,12 +39,12 @@
           ln -sf ${pkgs.oh-my-zsh}/share/oh-my-zsh /home/sthordall/.oh-my-zsh
         fi
 
-        if [ ! -d /home/sthordall/.vim/bundle/Vundle.vim ]
+        if [ ! -d /home/sthordall/.vim/autoload ]
         then
-          mkdir -p /home/sthordall/.vim/bundle
-          git clone https://github.com/VundleVim/Vundle.vim.git \
-            /home/sthordall/.vim/bundle/Vundle.vim
+          curl -fLo /home/sthordall/.vim/autoload/plug.vim --create-dirs \
+            https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
         fi
+        chown -R sthordall:users /home/sthordall/.vim
 
         if [ ! -d /home/sthordall/.emacs.d ]
         then

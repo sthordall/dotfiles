@@ -9,7 +9,7 @@ ZSH_THEME="juanghurtado"
 # Changes format of command execution time stamp shown in the history command output.
 HIST_STAMPS="dd/mm/yyyy"
 
-plugins=(git git-extras osx colored-man-pages docker github stack vundle tmux)
+plugins=(git git-extras osx colored-man-pages docker github stack tmux taskwarrior)
 
 # Alias
 alias -g nixi='nix-env -iA'

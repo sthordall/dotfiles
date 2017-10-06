@@ -2,13 +2,16 @@
 
 {
   environment.systemPackages = with pkgs; [
-    chromium vivaldi
+    chromium firefox
 
-    despotify vlc
+    vlc
 
-    rxvt_unicode
+    slack discord
+
+    rxvt_unicode urxvt_vtwheel
 
     libnotify
+    librsvg
     font-awesome-ttf
     gtk-engine-murrine
     numix-gtk-theme
@@ -21,12 +24,14 @@
     xfce.xfce4_genmon_plugin
     xfce.xfce4_systemload_plugin
     xfce.xfce4_xkb_plugin
+    xfce.xfce4_whiskermenu_plugin
     xfce.xfce4taskmanager
   ];
 
   services.xserver = {
     enable = true;
     layout = "us";
+    xkbOptions = "caps:escape";
     displayManager.lightdm.enable = true;
     desktopManager.xfce.enable = true;
   };
