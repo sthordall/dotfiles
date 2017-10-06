@@ -37,7 +37,7 @@
       liveRestore = false;
       listenOptions = [ "/var/run/docker.sock" "0.0.0.0:2375" ];
       extraOptions = ''
-        --insecure-registry docker-hub:5043 --insecure-registry docker-hub:5000
+        --insecure-registry db-docker-fxcore.artifactory.danskenet.net
       '';
     };
     virtualbox = {
