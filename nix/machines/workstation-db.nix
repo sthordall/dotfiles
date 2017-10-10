@@ -33,6 +33,7 @@
 
   virtualisation = {
     docker = {
+      package = pkgs.docker_17_06;
       enable = true;
       liveRestore = false;
       listenOptions = [ "/var/run/docker.sock" "0.0.0.0:2375" ];
