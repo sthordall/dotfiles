@@ -25,7 +25,7 @@
       isNormalUser = true;
       home = "/home/sthordall";
       description = "Stephan Thordal";
-      extraGroups = [ "users" "wheel" "networkmanager" "docker" ];
+      extraGroups = [ "users" "wheel" "docker" ];
       initialPassword = "sthordall";
     };
     stabbynie = {
@@ -63,6 +63,5 @@
     hostName = "ananas";
     hostId = "1337beef";
     firewall.enable = false;
-    networkmanager.enable = true;
   };
 }

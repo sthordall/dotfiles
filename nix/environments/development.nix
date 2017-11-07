@@ -48,6 +48,7 @@ let
     # .NET
     mono46
     unstable.fsharp41
+    unstable.dotnet-sdk
     FSharpAutoComplete
     FSharpCompilerCodeDom
     FSharpCompilerService

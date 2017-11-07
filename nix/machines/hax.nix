@@ -12,7 +12,7 @@
     sthordall = {
       isNormalUser = true;
       home = "/home/sthordall";
-      extraGroups = [ "users" "wheel" "networkmanager" "docker" ];
+      extraGroups = [ "users" "wheel" "docker" ];
       initialPassword = "sthordall";
     };
     stabbynie = {
@@ -40,7 +40,6 @@
   networking = {
     hostName = "hax";
     firewall.enable = false;
-    networkmanager.enable = true;
   };
 
   hardware.opengl.driSupport32Bit = true;

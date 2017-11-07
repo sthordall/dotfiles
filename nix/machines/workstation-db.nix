@@ -12,7 +12,7 @@
     isNormalUser = true;
     home = "/home/sthordall";
     description = "Stephan Thordal";
-    extraGroups = [ "wheel" "networkmanager" "docker" "vboxsf" ];
+    extraGroups = [ "wheel" "docker" ];
     initialPassword = "sthordall";
   };
 
@@ -56,7 +56,6 @@
     search = [ "danskenet.net" ];
     proxy.default = "http://127.0.0.1:3128/";
     firewall.enable = false;
-    networkmanager.enable = true;
   };
 
   services.cntlm = {
