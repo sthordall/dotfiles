@@ -5,6 +5,7 @@
 (add-to-list 'package-archives '("melpa-stable" . "http://stable.melpa.org/packages/"))
 
 (setq package-enable-at-startup nil)
+
 (package-initialize)
 
 (unless (package-installed-p 'use-package)
@@ -24,7 +25,7 @@
   :mode ("\\.fs\\'" . fsharp-mode)
   :interpreter ("fsharpi" . fsharp-mode)
   :config (setq inferior-fsharp-program "fsharpi --readline-")
-	  (setq fsharp-compiler "fsharpc"))
+          (setq fsharp-compiler "fsharpc"))
 
 (use-package dracula-theme
   :ensure t
@@ -33,3 +34,21 @@
 (use-package yaml-mode
   :ensure t
   :mode ("\\.yaml\\'" . yaml-mode))
+
+(use-package nlinum-relative
+  :ensure t
+  :config (setq nlinum-relative-current-symbol ">")
+          (setq nlinum-relative-redisplay-delay 0)
+          (nlinum-relative-setup-evil)
+          (add-hook 'prog-mode-hook 'nlinum-relative-mode))
+
+(use-package smart-mode-line
+  :ensure t
+  :config (setq sml/no-confirm-load-theme t)
+          (setq sml/theme 'respectful)
+          (sml/setup))
+
+;; UI
+(scroll-bar-mode -1)
+(tool-bar-mode -1)
+(setq inhibit-startup-screen t)
