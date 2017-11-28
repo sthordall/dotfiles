@@ -14,7 +14,7 @@ function linkdot {
   ln -fs $DOTFILES_DIR/$1 $HOME_DIR/$2
 }
 
-linkdot emacs/spacemacs .spacemacs
+linkdot emacs/emacs .emacs
 linkdot git/gitconfig .gitconfig
 linkdot git/gitignore .gitignore
 linkdot scripts .scripts

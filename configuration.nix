@@ -46,14 +46,6 @@
         fi
         chown -R sthordall:users /home/sthordall/.vim
 
-        if [ ! -d /home/sthordall/.emacs.d ]
-        then
-          mkdir -p /home/sthordall/.emacs.d
-          git clone https://github.com/syl20bnr/spacemacs \
-            /home/sthordall/.emacs.d
-        fi
-        chown -R sthordall:users /home/sthordall/.emacs.d
-
         cd /etc/nixos
         ./link.sh sthordall stephan@thordal.io /home/sthordall /etc/nixos
       '';
