@@ -5,6 +5,7 @@
   users.defaultUserShell = "/run/current-system/sw/bin/zsh";
 
   environment.systemPackages = with pkgs; [
+    ag
     awscli
     curl
     davfs2

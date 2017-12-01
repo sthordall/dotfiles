@@ -7,14 +7,11 @@ let
 in
   {
     environment.systemPackages = with pkgs; [
-      chromium
-
+      unstable.firefox chromium
       vlc
-
       slack discord
-
       rxvt_unicode urxvt_vtwheel
-
+      keepass
       vscode
       libnotify
       librsvg
