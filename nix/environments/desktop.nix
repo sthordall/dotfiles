@@ -7,7 +7,7 @@ let
 in
   {
     environment.systemPackages = with pkgs; [
-      unstable.firefox chromium
+      firefox-bin chromium
       vlc
       slack discord
       rxvt_unicode urxvt_vtwheel
