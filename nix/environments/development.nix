@@ -39,7 +39,7 @@ in
       cabal2nix
 
       # Go
-      go hugo
+      go gotools hugo
 
       # Python
       python
