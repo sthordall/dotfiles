@@ -25,6 +25,7 @@ Plug 'dag/vim2hs'
 Plug 'blindFS/vim-taskwarrior'
 Plug 'dracula/vim'
 Plug 'majutsushi/tagbar'
+Plug 'mileszs/ack.vim'
 call plug#end()
 " }}}
 
@@ -62,8 +63,6 @@ map <space><space> <leader><leader>
 nnoremap <leader><Tab> :NERDTreeToggle<CR>
 nnoremap <leader>f :CtrlP<CR>
 nnoremap <leader>b :CtrlPBuffer<CR>
-nnoremap <leader>/ "zyiw:vimgrep /<C-r>z/gj **/*.%:e<CR>:cw<CR>
-nnoremap <leader>g "zyiw:vimgrep /<C-r>z/gj **/*
 nmap <leader><leader> :nohlsearch<CR>
 map <C-l> :bnext<CR>
 map <C-h> :bprevious<CR>
@@ -122,6 +121,13 @@ set wildmenu
 set wildignorecase
 " }}}
 
+" Ack {{{
+nnoremap <leader>a :Ack!<Space>
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+" }}}
+"
 " Lightline {{{
 let g:lightline = {
       \ 'colorscheme': 'Dracula',

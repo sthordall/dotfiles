@@ -17,6 +17,7 @@ function linkdot {
 linkdot spacemacs/spacemacs .spacemacs
 linkdot git/gitconfig .gitconfig
 linkdot git/gitignore .gitignore
+linkdot gtk/gtkrc-2.0 .gtkrc-2.0
 linkdot scripts .scripts
 linkdot tmux/tmux.conf .tmux.conf
 linkdot vim/vimrc .vimrc
