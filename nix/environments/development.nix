@@ -19,6 +19,7 @@ in
       meld
       emacs
       gcc
+      universal-ctags
 
       # Elm
       elm

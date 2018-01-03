@@ -9,8 +9,7 @@ Plug 'scrooloose/syntastic'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdcommenter'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'airblade/vim-gitgutter'
@@ -25,6 +24,7 @@ Plug 'alx741/vim-hindent'
 Plug 'dag/vim2hs'
 Plug 'blindFS/vim-taskwarrior'
 Plug 'dracula/vim'
+Plug 'majutsushi/tagbar'
 call plug#end()
 " }}}
 
@@ -122,13 +122,10 @@ set wildmenu
 set wildignorecase
 " }}}
 
-" Airline {{{
-let g:airline_powerline_fonts=0
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = ' '
-let g:airline#extensions#tabline#right_sep = ' '
-let g:airline#extensions#tabline#right_alt_sep = ' '
+" Lightline {{{
+let g:lightline = {
+      \ 'colorscheme': 'Dracula',
+      \ }
 " }}}
 
 " CtrlP {{{
@@ -162,6 +159,10 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 " }}}
 
+" Tagbar {{{
+nmap <leader>T :TagbarToggle<CR>
+" }}}
+
 " Elm {{{
 let g:elm_syntastic_show_warnings = 1
 " }}}
@@ -178,7 +179,7 @@ let g:hindent_line_length = 100
 " F# {{{
 let g:syntastic_fsharp_checkers=['syntax']
 let g:fsharp_only_check_errors_on_write = 1
-let g:fsharp_completion_helptext = 1
+let g:fsharp_completion_helptext = 0
 let g:fsharp_map_keys = 1
 let g:fsharp_map_gotodecl = 'g'
 let g:fsharp_map_gobackfromdecl = 'b'
