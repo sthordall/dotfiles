@@ -26,6 +26,7 @@ Plug 'blindFS/vim-taskwarrior'
 Plug 'dracula/vim'
 Plug 'majutsushi/tagbar'
 Plug 'mileszs/ack.vim'
+Plug 'fatih/vim-go'
 call plug#end()
 " }}}
 
@@ -193,7 +194,7 @@ let g:fsharp_helptext_comments = 1
 " }}}
 
 " GUI {{{
-set guifont=Hack\ 12
+set guifont=Hack\ 11
 set guioptions-=m  "remove menu bar
 set guioptions-=T  "remove toolbar
 set guioptions-=r  "remove right-hand scroll bar
