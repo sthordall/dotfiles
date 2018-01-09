@@ -49,7 +49,7 @@ set background=dark
 set lazyredraw
 set listchars=tab:•\ ,trail:•,extends:»,precedes:«
 set list
-set foldmethod=marker
+set foldmethod=indent
 set foldenable
 set foldlevelstart=10
 set foldnestmax=10
@@ -83,8 +83,7 @@ autocmd FileType haskell map <silent> <leader>i :GhcModInfo<CR>
 autocmd FileType haskell map <silent> <leader>I :GhcModInfoPreview<CR>
 autocmd FileType haskell map <silent> <leader>l :GhcModLint<CR>
 autocmd FileType haskell map <silent> <leader>e :GhcModExpand<CR>
-autocmd FileType haskell map <silent> <leader>g :GhcModSigCodegen<CR>
-autocmd FileType haskell map <silent> <leader>s :GhcModSplitFunCase<CR>
+autocmd FileType haskell map <silent> <leader>s :GhcModSigCodegen<CR>
 " }}}
 
 " Ignore {{{
