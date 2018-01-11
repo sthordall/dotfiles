@@ -9,7 +9,7 @@ in
     environment.systemPackages = with pkgs; [
       firefox-bin chromium
       vlc
-      slack discord
+      slack discord tdesktop
       rxvt_unicode urxvt_vtwheel
       keepass
       vscode

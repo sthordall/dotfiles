@@ -27,6 +27,7 @@ Plug 'dracula/vim'
 Plug 'majutsushi/tagbar'
 Plug 'mileszs/ack.vim'
 Plug 'fatih/vim-go'
+Plug 'vimwiki/vimwiki'
 call plug#end()
 " }}}
 
@@ -190,6 +191,10 @@ let g:fsharp_map_keys = 1
 let g:fsharp_map_gotodecl = 'g'
 let g:fsharp_map_gobackfromdecl = 'b'
 let g:fsharp_helptext_comments = 1
+" }}}
+
+" Vimwiki {{{
+  let g:vimwiki_list = [{'path': '~/wiki/', 'syntax': 'markdown', 'ext': '.md'}]
 " }}}
 
 " GUI {{{
