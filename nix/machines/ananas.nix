@@ -4,6 +4,7 @@
   imports =
     [
       ../environments/cli.nix
+      ../environments/media.nix
       ../environments/server.nix
     ];
 

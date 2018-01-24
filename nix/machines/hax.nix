@@ -6,6 +6,7 @@
       ../environments/cli.nix
       ../environments/desktop.nix
       ../environments/development.nix
+      ../environments/media.nix
     ];
 
   users.extraUsers= {

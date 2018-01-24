@@ -2,31 +2,32 @@ set nocompatible
 
 " Plugins {{{
 call plug#begin('~/.vim/plugged')
-Plug 'tpope/vim-sensible'
+Plug 'LnL7/vim-nix'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'scrooloose/syntastic'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'tpope/vim-surround'
-Plug 'scrooloose/nerdcommenter'
-Plug 'itchyny/lightline.vim'
-Plug 'tpope/vim-fugitive'
-Plug 'terryma/vim-multiple-cursors'
 Plug 'airblade/vim-gitgutter'
-Plug 'fsharp/vim-fsharp', { 'for': 'fsharp', 'do': 'make fsautocomplete' }
-Plug 'elmcast/elm-vim'
-Plug 'junegunn/vim-easy-align'
-Plug 'junegunn/goyo.vim'
-Plug 'ervandew/supertab'
+Plug 'alx741/vim-hindent'
+Plug 'blindFS/vim-taskwarrior'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'dag/vim2hs'
+Plug 'dracula/vim'
 Plug 'eagletmt/ghcmod-vim'
 Plug 'eagletmt/neco-ghc'
-Plug 'alx741/vim-hindent'
-Plug 'dag/vim2hs'
-Plug 'blindFS/vim-taskwarrior'
-Plug 'dracula/vim'
+Plug 'elmcast/elm-vim'
+Plug 'ervandew/supertab'
+Plug 'fatih/vim-go'
+Plug 'fsharp/vim-fsharp', { 'for': 'fsharp', 'do': 'make fsautocomplete' }
+Plug 'itchyny/lightline.vim'
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/vim-easy-align'
 Plug 'majutsushi/tagbar'
 Plug 'mileszs/ack.vim'
-Plug 'fatih/vim-go'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'scrooloose/syntastic'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-surround'
 Plug 'vimwiki/vimwiki'
 call plug#end()
 " }}}
