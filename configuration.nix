@@ -10,7 +10,7 @@
       # Machine Specific (Uncomment machine nix file)
       #./nix/machines/workstation-db.nix
       #./nix/machines/workstation-home.nix
-      ./nix/machines/ananas.nix
+      #./nix/machines/ananas.nix
     ];
 
   nixpkgs.config = {
