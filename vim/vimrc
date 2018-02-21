@@ -9,7 +9,8 @@ Plug 'alx741/vim-hindent'
 Plug 'blindFS/vim-taskwarrior'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'dag/vim2hs'
-Plug 'dracula/vim'
+Plug 'morhetz/gruvbox'
+Plug 'shinchu/lightline-gruvbox.vim'
 Plug 'eagletmt/ghcmod-vim'
 Plug 'eagletmt/neco-ghc'
 Plug 'elmcast/elm-vim'
@@ -47,7 +48,7 @@ set incsearch
 set hlsearch
 set relativenumber
 set nocursorline
-set background=dark
+set background=light
 set lazyredraw
 set listchars=tab:•\ ,trail:•,extends:»,precedes:«
 set list
@@ -55,8 +56,7 @@ set foldmethod=indent
 set foldenable
 set foldlevelstart=10
 set foldnestmax=10
-color dracula
-hi Conceal ctermfg=7 ctermbg=242 guifg=LightGrey guibg=#282a36
+colorscheme gruvbox
 " }}}
 
 " Mappings {{{
@@ -132,7 +132,7 @@ endif
 "
 " Lightline {{{
 let g:lightline = {
-      \ 'colorscheme': 'Dracula',
+      \ 'colorscheme': 'gruvbox',
       \ }
 " }}}
 
@@ -199,7 +199,7 @@ let g:fsharp_helptext_comments = 1
 " }}}
 
 " GUI {{{
-set guifont=Hack\ 11
+set guifont=Fira\ Mono\ Medium\ 11
 set guioptions-=m  "remove menu bar
 set guioptions-=T  "remove toolbar
 set guioptions-=r  "remove right-hand scroll bar
