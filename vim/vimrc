@@ -48,7 +48,7 @@ set incsearch
 set hlsearch
 set relativenumber
 set nocursorline
-set background=light
+set background=dark
 set lazyredraw
 set listchars=tab:•\ ,trail:•,extends:»,precedes:«
 set list
@@ -185,7 +185,7 @@ let g:hindent_line_length = 100
 " }}}
 
 " F# {{{
-let g:syntastic_fsharp_checkers=['syntax']
+let g:syntastic_fsharp_checkers=['']
 let g:fsharp_only_check_errors_on_write = 1
 let g:fsharp_completion_helptext = 0
 let g:fsharp_map_keys = 1
