@@ -199,7 +199,7 @@ let g:fsharp_helptext_comments = 1
 " }}}
 
 " GUI {{{
-set guifont=Fira\ Mono\ Medium\ 11
+set guifont=Hack\ 11
 set guioptions-=m  "remove menu bar
 set guioptions-=T  "remove toolbar
 set guioptions-=r  "remove right-hand scroll bar
