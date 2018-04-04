@@ -20,6 +20,7 @@ in
       emacs
       gcc
       universal-ctags
+      unstable.insomnia
 
       # Elm
       elm
@@ -47,7 +48,7 @@ in
       python27Packages.pygments
 
       # .NET
-      mono46
+      mono54
       unstable.fsharp41
       unstable.dotnet-sdk
       FSharpAutoComplete
