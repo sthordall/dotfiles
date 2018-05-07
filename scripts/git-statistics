@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+
+function getRepoStats () {
+  printf "Creating stats for $1 ...\n"
+  cd "$1"
+  if [ -d ".git" ]; then
+    IFS=' ' read -a STATS <<< $(git log --pretty=tformat: --numstat | awk '{inserted+=$1; deleted+=$2; delta+=$1-$2} END {print inserted, deleted, delta}')
+    printf "\tInserted      : ${STATS[0]}\n"
+    printf "\tDeleted       : ${STATS[1]}\n"
+    printf "\tLines of code : ${STATS[2]}\n\n"
+  else
+    printf "Not a git repository ...\n"
+    IFS=' ' read -a STATS <<< "0 0 0"
+  fi
+  cd ..
+}
+
+TOTALSTATS=(0 0 0)
+for directories in */ ; do
+  getRepoStats $directories
+
+  TOTALSTATS[0]=`expr ${TOTALSTATS[0]} + ${STATS[0]}`
+  TOTALSTATS[1]=`expr ${TOTALSTATS[1]} + ${STATS[1]}`
+  TOTALSTATS[2]=`expr ${TOTALSTATS[2]} + ${STATS[2]}`
+done
+
+printf "\n\n"
+printf "#################################\n"
+printf "Total Inserted      : ${TOTALSTATS[0]}\n"
+printf "Total Deleted       : ${TOTALSTATS[1]}\n"
+printf "Total Lines of code : ${TOTALSTATS[2]}\n"
+printf "#################################\n"
