@@ -11,7 +11,7 @@ in
       slack discord tdesktop
       rxvt_unicode urxvt_vtwheel
       keepass
-      vscode
+      unstable.vscode
       libnotify
       librsvg
       font-awesome-ttf

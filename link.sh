@@ -23,3 +23,4 @@ linkdot tmux/tmux.conf .tmux.conf
 linkdot vim/vimrc .vimrc
 linkdot x/Xresources .Xresources
 linkdot zsh/zshrc .zshrc
+linkdot code .config/Code/User

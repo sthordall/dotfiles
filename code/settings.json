@@ -1,0 +1,18 @@
+{
+    "editor.fontFamily": "Hack, 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.glyphMargin": false,
+    "editor.lineNumbers": "relative",
+    "editor.minimap.enabled": false,
+    "editor.renderIndentGuides": false,
+    "editor.tabCompletion": true,
+    "window.menuBarVisibility": "toggle",
+    "workbench.colorTheme": "Material Theme Lighter",
+    "workbench.iconTheme": "eq-material-theme-icons",
+    "vim.hlsearch": true,
+    "files.trimTrailingWhitespace": true,
+    "editor.quickSuggestions": {
+        "other": false,
+        "comments": false,
+        "strings": false
+    },
+}
