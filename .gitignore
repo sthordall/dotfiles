@@ -1,7 +1,5 @@
 *gitconfig.sym
 
-# Rest is created by https://www.gitignore.io/api/macos,vim,git
-
 ### macOS ###
 *.DS_Store
 .AppleDouble
@@ -41,6 +39,10 @@ tags
 
 ### Git ###
 *.orig
+git/gitconfig
 
 ### NixOS ###
 hardware-configuration.nix
+
+### VS Code ###
+code/workspaceStorage

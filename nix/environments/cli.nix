@@ -23,6 +23,7 @@
     vimHugeX
     wget
     xclip
+    xsel
     zsh
     zsh-completions
   ];

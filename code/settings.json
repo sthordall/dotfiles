@@ -6,13 +6,14 @@
     "editor.renderIndentGuides": false,
     "editor.tabCompletion": true,
     "window.menuBarVisibility": "toggle",
-    "workbench.colorTheme": "Material Theme Lighter",
+    "workbench.colorTheme": "Material Theme Palenight",
     "workbench.iconTheme": "eq-material-theme-icons",
     "vim.hlsearch": true,
     "files.trimTrailingWhitespace": true,
     "editor.quickSuggestions": {
-        "other": false,
+        "other": true,
         "comments": false,
-        "strings": false
+        "strings": true
     },
+    "editor.codeLens": false,
 }
