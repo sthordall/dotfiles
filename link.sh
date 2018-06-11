@@ -11,7 +11,7 @@ sed -e "s/AUTHORNAME/$USERNAME/g" \
     git/gitconfig.example > git/gitconfig
 
 function linkdot {
-  ln -fs $DOTFILES_DIR/$1 $HOME_DIR/$2
+  ln -fsn $DOTFILES_DIR/$1 $HOME_DIR/$2
 }
 
 linkdot spacemacs/spacemacs .spacemacs

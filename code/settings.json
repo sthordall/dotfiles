@@ -6,8 +6,8 @@
     "editor.renderIndentGuides": false,
     "editor.tabCompletion": true,
     "window.menuBarVisibility": "toggle",
-    "workbench.colorTheme": "Material Theme Palenight",
-    "workbench.iconTheme": "eq-material-theme-icons",
+    "workbench.colorTheme": "Material Theme Palenight High Contrast",
+    "workbench.iconTheme": "eq-material-theme-icons-palenight",
     "vim.hlsearch": true,
     "files.trimTrailingWhitespace": true,
     "editor.quickSuggestions": {
@@ -16,4 +16,6 @@
         "strings": true
     },
     "editor.codeLens": false,
+    "materialTheme.fixIconsRunning": false,
+    "editor.tabSize": 2,
 }
