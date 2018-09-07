@@ -1,60 +1,37 @@
 { config, pkgs, ... }:
 
-let
-  unstable = (import (fetchTarball https://github.com/NixOS/nixpkgs-channels/archive/nixos-unstable.tar.gz) {
-      inherit (config.nixpkgs) config system;
-    }).pkgs;
-in
-  {
-    nixpkgs.config.packageOverrides = pkgs: rec {
-      elm-format-linked = pkgs.elmPackages.elm-format.overrideDerivation (oldAttrs: {
-        postInstall = ''ln -s $out/bin/elm-format-0.18 $out/bin/elm-format'';
-      });
-    };
+{
+  environment.systemPackages = with pkgs; with dotnetPackages; [
+    # Tools
+    gnumake
+    meld
+    gcc
+    universal-ctags
 
-    environment.systemPackages = with pkgs; with elmPackages; with dotnetPackages; [
-      # Tools
-      gnumake
-      pgadmin
-      meld
-      emacs
-      gcc
-      universal-ctags
-      unstable.insomnia
+    # JS
+    nodejs
 
-      # Elm
-      elm
-      elm-compiler
-      elm-format-linked
-      elm-make
-      elm-package
-      elm-reactor
-      elm-repl
+    # Haskell
+    stack
+    ghc
+    cabal-install
+    cabal2nix
 
-      # JS
-      nodejs
+    # Go
+    go gotools hugo
 
-      # Haskell
-      unstable.stack
-      ghc
-      cabal-install
-      cabal2nix
+    # Python
+    python
+    python27Packages.pygments
 
-      # Go
-      go gotools hugo
-
-      # Python
-      python
-      python27Packages.pygments
-
-      # .NET
-      mono54
-      unstable.fsharp41
-      unstable.dotnet-sdk
-      FSharpAutoComplete
-      FSharpCompilerCodeDom
-      FSharpCompilerService
-      FSharpData
-      FSharpFormatting
-    ];
-  }
+    # .NET
+    mono54
+    fsharp41
+    dotnet-sdk
+    FSharpAutoComplete
+    FSharpCompilerCodeDom
+    FSharpCompilerService
+    FSharpData
+    FSharpFormatting
+  ];
+}
