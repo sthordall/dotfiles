@@ -11,11 +11,6 @@ HIST_STAMPS="dd/mm/yyyy"
 
 plugins=(git git-extras osx colored-man-pages docker github stack tmux taskwarrior)
 
-# Alias
-alias -g nixi='nix-env -iA'
-alias -g nixiu='nix-env -f https://github.com/NixOS/nixpkgs-channels/archive/nixos-unstable.tar.gz -i'
-alias -g nixqu='nix-env -f https://github.com/NixOS/nixpkgs-channels/archive/nixos-unstable.tar.gz -qa'
-
 # Paths
 export DEV=$HOME/Development
 export GOPATH=$DEV/go

@@ -14,10 +14,8 @@ function linkdot {
   ln -fsn $DOTFILES_DIR/$1 $HOME_DIR/$2
 }
 
-linkdot spacemacs/spacemacs .spacemacs
 linkdot git/gitconfig .gitconfig
 linkdot git/gitignore .gitignore
-linkdot gtk/gtkrc-2.0 .gtkrc-2.0
 linkdot scripts .scripts
 linkdot tmux/tmux.conf .tmux.conf
 linkdot vim/vimrc .vimrc
