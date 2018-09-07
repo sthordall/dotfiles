@@ -1,13 +1,19 @@
 #!/usr/bin/env bash
 
-if [ ! -d /home/sthordall/.oh-my-zsh ]
+if [ ! -d ~/.oh-my-zsh ]
 then
   sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 fi
 
-if [ ! -d /home/sthordall/.vim/autoload ]
+if [ ! -d ~/.vim/autoload ]
 then
-  curl -fLo /home/sthordall/.vim/autoload/plug.vim --create-dirs \
+  mkdir -p ~/.vim/autoload
+  curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 fi
 
+if [ ! -d ~/.tmux/plugins/tpm ]
+then
+  mkdir -p ~/.tmux/plugins
+  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+fi
