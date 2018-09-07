@@ -6,11 +6,8 @@ Plug 'LnL7/vim-nix'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'airblade/vim-gitgutter'
 Plug 'alx741/vim-hindent'
-Plug 'blindFS/vim-taskwarrior'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'dag/vim2hs'
-Plug 'morhetz/gruvbox'
-Plug 'shinchu/lightline-gruvbox.vim'
 Plug 'eagletmt/ghcmod-vim'
 Plug 'eagletmt/neco-ghc'
 Plug 'elmcast/elm-vim'
@@ -20,6 +17,7 @@ Plug 'fsharp/vim-fsharp', { 'for': 'fsharp', 'do': 'make fsautocomplete' }
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/vim-easy-align'
+Plug 'kaicataldo/material.vim'
 Plug 'majutsushi/tagbar'
 Plug 'mileszs/ack.vim'
 Plug 'scrooloose/nerdcommenter'
@@ -56,7 +54,9 @@ set foldmethod=indent
 set foldenable
 set foldlevelstart=10
 set foldnestmax=10
-colorscheme gruvbox
+colorscheme material
+let g:material_theme_style = 'palenight'
+let g:material_terminal_italics = 1
 " }}}
 
 " Mappings {{{
@@ -132,7 +132,7 @@ endif
 "
 " Lightline {{{
 let g:lightline = {
-      \ 'colorscheme': 'gruvbox',
+      \ 'colorscheme': 'material_vim',
       \ }
 " }}}
 
