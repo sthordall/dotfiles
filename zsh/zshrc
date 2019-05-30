@@ -14,6 +14,6 @@ plugins=(git git-extras osx colored-man-pages docker github stack tmux taskwarri
 # Paths
 export DEV=$HOME/Development
 export GOPATH=$DEV/go
-export PATH=$PATH:$GOPATH/bin:$HOME/.scripts
+export PATH=$PATH:$GOPATH/bin:$HOME/.scripts:/snap/bin
 
 source $ZSH/oh-my-zsh.sh
