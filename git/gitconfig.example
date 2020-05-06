@@ -3,6 +3,15 @@
 [user]
   name = AUTHORNAME
   email = AUTHOREMAIL
+[alias]
+  co = checkout
+  br = branch
+  ci = commit
+  st = status
+  pl = pull
+  rb = rebase
+  cl = clone
+  ciw = commit
 [color]
   diff = auto
   status = auto

@@ -6,12 +6,13 @@ Plug 'LnL7/vim-nix'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'airblade/vim-gitgutter'
 Plug 'alx741/vim-hindent'
+Plug 'ambv/black'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'cespare/vim-toml'
 Plug 'dag/vim2hs'
 Plug 'eagletmt/ghcmod-vim'
 Plug 'eagletmt/neco-ghc'
 Plug 'edkolev/tmuxline.vim'
-Plug 'elmcast/elm-vim'
 Plug 'ervandew/supertab'
 Plug 'fatih/vim-go'
 Plug 'fsharp/vim-fsharp', { 'for': 'fsharp', 'do': 'make fsautocomplete' }
@@ -21,6 +22,7 @@ Plug 'junegunn/vim-easy-align'
 Plug 'kaicataldo/material.vim'
 Plug 'majutsushi/tagbar'
 Plug 'mileszs/ack.vim'
+Plug 'nvie/vim-flake8'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'scrooloose/syntastic'
@@ -32,29 +34,29 @@ Plug 'vimwiki/vimwiki'
 call plug#end()
 " }}}
 
-" Preference {{{
-set smarttab
-set expandtab
-set tabstop=2
-set smartindent
+" Preferences {{{
 set autoindent
-set ignorecase
-set smartcase
-set nu
-set shiftwidth=2
-set tw=80
-set incsearch
-set hlsearch
-set relativenumber
-set nocursorline
 set background=dark
-set lazyredraw
-set listchars=tab:•\ ,trail:•,extends:»,precedes:«
-set list
-set foldmethod=indent
+set expandtab
+set encoding=utf-8
 set foldenable
 set foldlevelstart=10
+set foldmethod=indent
 set foldnestmax=10
+set hlsearch
+set ignorecase
+set incsearch
+set lazyredraw
+set list
+set listchars=tab:•\ ,trail:•,extends:»,precedes:«
+set nocursorline
+set nu
+set relativenumber
+set shiftwidth=2
+set smartcase
+set smartindent
+set smarttab
+set tabstop=2
 colorscheme material
 let g:material_theme_style = 'palenight'
 let g:material_terminal_italics = 1
@@ -96,9 +98,12 @@ set wildignore+=*/tmp/*
 set wildignore+=*/obj/*
 set wildignore+=*/bin/*
 set wildignore+=*/build/*
-set wildignore+=*/elm-stuff/*
 set wildignore+=*/.git/*
 set wildignore+=*/.cabal-sandbox/*
+set wildignore+=*/.env/*
+set wildignore+=*/__pycache__/*
+set wildignore+=*/.pytest_cache/*
+set wildignore+=*/.mypy_cache/*
 set wildignore+=*.swp
 set wildignore+=*.swo
 set wildignore+=*.zip
@@ -172,8 +177,8 @@ let g:syntastic_check_on_open = 1
 nmap <leader>T :TagbarToggle<CR>
 " }}}
 
-" Elm {{{
-let g:elm_syntastic_show_warnings = 1
+" Python {{{
+let python_highlight_all = 1
 " }}}
 
 " Haskell {{{
