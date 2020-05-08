@@ -2,13 +2,12 @@ set nocompatible
 
 " Plugins {{{
 call plug#begin('~/.vim/plugged')
-Plug 'LnL7/vim-nix'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'airblade/vim-gitgutter'
 Plug 'alx741/vim-hindent'
 Plug 'ambv/black'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'cespare/vim-toml'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'dag/vim2hs'
 Plug 'eagletmt/ghcmod-vim'
 Plug 'eagletmt/neco-ghc'
@@ -26,6 +25,7 @@ Plug 'nvie/vim-flake8'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'scrooloose/syntastic'
+Plug 'sheerun/vim-polyglot'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'

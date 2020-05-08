@@ -9,7 +9,24 @@ ZSH_THEME="spaceship"
 # Changes format of command execution time stamp shown in the history command output.
 HIST_STAMPS="dd/mm/yyyy"
 
-plugins=(git git-extras osx colored-man-pages docker github tmux taskwarrior virtualenv)
+plugins=(
+  brew
+  colorize
+  colored-man-pages
+  docker
+  git
+  git-extras
+  github
+  gnu-utils
+  go
+  osx
+  stack
+  taskwarrior
+  tmux
+  virtualenv
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+)
 
 # Paths
 export DEV=$HOME/Development
