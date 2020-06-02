@@ -18,9 +18,8 @@ plugins=(
   git-extras
   github
   gnu-utils
-  go
+  golang
   osx
-  stack
   taskwarrior
   tmux
   virtualenv
