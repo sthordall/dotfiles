@@ -129,6 +129,15 @@ set wildmenu
 set wildignorecase
 " }}}
 
+" Auto citations, parens, brackets etc.
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap {<CR> {<CR>}<ESC>O
+inoremap {;<CR> {<CR>};<ESC>O
+
 " Ack {{{
 nnoremap <leader>a :Ack!<Space>
 if executable('ag')
