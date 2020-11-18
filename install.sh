@@ -20,7 +20,7 @@ if [[ $OSTYPE == "linux-gnu"* ]]; then
   for package in ${PACKAGES[@]}; do
     if ! hash $package &>/dev/null; then
       echo "Installing package: $package"
-      sudo apt install $package
+      sudo pacman -S $package
     fi
   done
 fi
