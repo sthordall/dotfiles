@@ -19,7 +19,7 @@ plugins=(
   github
   gnu-utils
   golang
-  osx
+  macos
   taskwarrior
   tmux
   virtualenv
@@ -31,5 +31,11 @@ plugins=(
 export DEV=$HOME/Development
 export GOPATH=$DEV/go
 export PATH=$PATH:$GOPATH/bin:$HOME/.scripts:/snap/bin
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+# Aliases
+alias tf="terraform"
 
 source $ZSH/oh-my-zsh.sh

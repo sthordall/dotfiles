@@ -5,7 +5,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'airblade/vim-gitgutter'
 Plug 'alx741/vim-hindent'
-Plug 'ambv/black'
 Plug 'cespare/vim-toml'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'dag/vim2hs'
@@ -73,22 +72,6 @@ nmap <leader><leader> :nohlsearch<CR>
 map <C-l> :bnext<CR>
 map <C-h> :bprevious<CR>
 map <C-j> :bdelete<CR>
-map <up> <nop>
-map <down> <nop>
-map <left> <nop>
-map <right> <nop>
-imap <up> <nop>
-imap <down> <nop>
-imap <left> <nop>
-imap <right> <nop>
-autocmd FileType haskell map <silent> <leader>t :GhcModType<CR>
-autocmd FileType haskell map <silent> <leader>T :GhcModTypeInsert<CR>
-autocmd FileType haskell map <silent> <leader>c :GhcModTypeClear<CR>
-autocmd FileType haskell map <silent> <leader>i :GhcModInfo<CR>
-autocmd FileType haskell map <silent> <leader>I :GhcModInfoPreview<CR>
-autocmd FileType haskell map <silent> <leader>l :GhcModLint<CR>
-autocmd FileType haskell map <silent> <leader>e :GhcModExpand<CR>
-autocmd FileType haskell map <silent> <leader>s :GhcModSigCodegen<CR>
 " }}}
 
 " Ignore {{{
@@ -188,15 +171,6 @@ nmap <leader>T :TagbarToggle<CR>
 
 " Python {{{
 let python_highlight_all = 1
-" }}}
-
-" Haskell {{{
-let g:haskellmode_completion_ghc = 1
-autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
-let g:haskell_tabular = 1
-let g:hindent_on_save = 0
-let g:hindent_indent_size = 2
-let g:hindent_line_length = 100
 " }}}
 
 " F# {{{
