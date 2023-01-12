@@ -4,10 +4,17 @@
 PACKAGES=(
   arduino-cli
   ccat
+  chroma
+  fortune
   git
   go
-  python3.7
+  httpie
+  nmap
+  python
+  redis
   rsync
+  strfile
+  terraform
   tmux
   vim
   fish

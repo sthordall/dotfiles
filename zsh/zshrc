@@ -4,38 +4,56 @@ export USER=`whoami`
 # Path to oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
-ZSH_THEME="spaceship"
+ZSH_THEME="juanghurtado"
 
 # Changes format of command execution time stamp shown in the history command output.
 HIST_STAMPS="dd/mm/yyyy"
 
 plugins=(
+  1password
+  battery
   brew
-  colorize
+  chucknorris
   colored-man-pages
+  colorize
+  command-not-found
+  common-aliases
   docker
+  flutter
   git
   git-extras
   github
+  gitignore
   gnu-utils
   golang
+  hitchhiker
+  httpie
+  iterm2
   macos
+  nmap
+  pyenv
+  python
+  redis-cli
   taskwarrior
+  terraform
   tmux
   virtualenv
   zsh-autosuggestions
   zsh-syntax-highlighting
 )
 
+# Python
+eval "$(pyenv init -)"
+
 # Paths
 export DEV=$HOME/Development
 export GOPATH=$DEV/go
-export PATH=$PATH:$GOPATH/bin:$HOME/.scripts:/snap/bin
+export PYENV_ROOT=$HOME/.pyenv
+export MAC_DEV_TOOLS=/Applications/Xcode.app/Contents/Developer
+export PATH=$PATH:$MAC_DEV_TOOLS:$GOPATH/bin:$HOME/.scripts:$PYENV_ROOT/bin:snap/bin
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-
-# Aliases
-alias tf="terraform"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 source $ZSH/oh-my-zsh.sh
