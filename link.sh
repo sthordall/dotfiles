@@ -19,6 +19,6 @@ linkdot git/gitignore .gitignore
 linkdot scripts .scripts
 linkdot tmux/tmux.conf .tmux.conf
 linkdot vim/vimrc .vimrc
+linkdot nvim .config/nvim
 linkdot x/Xresources .Xresources
 linkdot zsh/zshrc .zshrc
-linkdot code .config/Code/User

@@ -10,6 +10,7 @@ PACKAGES=(
   go
   httpie
   nmap
+  nvim
   python
   redis
   rsync
